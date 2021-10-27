@@ -1,3 +1,15 @@
+This repo was designed to help me learn how to use React!
+It displays many pictures of some beautiful horned beasts. I hope you enjoy it!
+
+
+Lab 02 Props and States:
+Estimated time needed: 2 hours.
+Start time 1:08pm.
+Finished time: 4:08pm.
+Actual time needed to (almost) complete: 2 hours 48 minutes.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

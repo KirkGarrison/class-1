@@ -9,33 +9,35 @@ import Selectedbeasts from './Selectedbeasts'
 
 
 export default class App extends Component {
-    //Something like this to store the data and send to modal?
   constructor(props) {
     super(props);
     this.state = {
-        show: false
+        show: false,
+        featuredBeast: {}
     }
 }
 
-selectedbeast = () => {
-  this.setState({
-    // On image click? Send image into modal
-
-  })
-}
-
 hideModal = () => {
-
+  this.setState( { show: false })
 }
 
+openModal = () => {
+  this.setState( { show: true })
+}
+
+updateBeast = (beast) => {
+  this.setState({
+    featuredBeast: beast
+  })
+  this.openModal();
+}
   render() {
     return (
       <div>
         <Header />
-        <Main data = {data}/>
+        <Main updateBeast={this.updateBeast} data = {data}/>
         <Footer />
-        <Main selectedbeast ={this.selectedbeast}/>
-        <Selectedbeasts show={this.state.show} hideModal={this.hideModal}/>
+        <Selectedbeasts featuredBeast={this.state.featuredBeast} show={this.state.show} hideModal={this.hideModal}/>
       </div>
     )
   }

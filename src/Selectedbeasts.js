@@ -8,14 +8,17 @@ export default class SelectedBeasts extends Component {
     handleClose = () => {
         this.props.hideModal();
     }
+
+    
+
     render () {
         return (
             <div>
             <Modal show={this.props.show} onHide={this.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Beast Name</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>Beast description</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.handleClose}>
                         Close

@@ -15,6 +15,10 @@ class Hornedbeasts extends Component {
         this.setState({Favorite: this.state.Favorite + 1});
     }
 
+        handleImgClick = () => {
+            this.props.updateBeast
+        }
+
     render() {
         return (
             <Card id="hornedBeastCard" style ={{ width: '18rem' }}>

@@ -1,28 +1,32 @@
 import { Component } from "react";
+import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 
 class Hornedbeasts extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            imageclicked: 0
+            Favorite: 0
         }
     }
 
     handleclick = () => {
-        this.setState({imageclicked: this.state.imageclicked + 1});
+        this.setState({Favorite: this.state.Favorite + 1});
     }
 
     render() {
         return (
-            <>
-                <h2>{this.props.title}</h2>
-                <img src={this.props.image} alt={this.props.alt} title={this.props.imgtitle} onClick={this.handleclick}/>
-                <p>{this.props.description}</p>
-                <p>{this.props.keyword}</p>
-                <p>{this.props.horns}</p>
-                <p>&hearts;: {this.state.imageclicked}</p>
-            </>
+            <Card id="hornedBeastCard" style ={{ width: '18rem' }}>
+                <Card.Img variant="top" src ={this.props.beasts.image_url} alt={this.props.beasts.description} />
+                <Card.Body>
+                <Card.Title>{this.props.beasts.title}</Card.Title>
+                <Card.Text>
+                    {this.props.beasts.description}
+                </Card.Text>
+                <Button variant="secondary" onClick={this.handleclick}>{'❤️ '}{this.state.Favorite}</Button>
+                </Card.Body>
+             </Card>
         )
     }
 }

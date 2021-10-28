@@ -11,8 +11,8 @@ class Main extends Component {
             <>
                 <Container>
                     <Row xs={1} sm={2} md={3} lg={4}>
-                        {this.props.data.map(beasts => 
-                            <Hornedbeasts beasts={beasts} />
+                        {this.props.beasts.map(beast => 
+                            <Hornedbeasts updateBeast={this.props.updateBeast} beast={beast} />
                         )}
                     </Row>
                 </Container>

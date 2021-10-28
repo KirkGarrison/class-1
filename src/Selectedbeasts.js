@@ -16,9 +16,10 @@ export default class SelectedBeasts extends Component {
             <div>
             <Modal show={this.props.show} onHide={this.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Beast Name</Modal.Title>
+                    <img src={this.props.featuredBeast.image_url} alt="the beast"/>
+                    <Modal.Title>{this.props.featuredBeast.title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Beast description</Modal.Body>
+                <Modal.Body>{this.props.featuredBeast.description}</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.handleClose}>
                         Close

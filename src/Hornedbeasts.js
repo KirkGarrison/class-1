@@ -16,17 +16,17 @@ class Hornedbeasts extends Component {
     }
 
         handleImgClick = () => {
-            this.props.updateBeast
+            this.props.updateBeast(this.props.beast)
         }
 
     render() {
         return (
             <Card id="hornedBeastCard" style ={{ width: '18rem' }}>
-                <Card.Img variant="top" src ={this.props.beasts.image_url} alt={this.props.beasts.description} />
+                <Card.Img variant="top" onClick={this.handleImgClick} src={this.props.beast.image_url} alt={this.props.beast.description} />
                 <Card.Body>
-                <Card.Title>{this.props.beasts.title}</Card.Title>
+                <Card.Title>{this.props.beast.title}</Card.Title>
                 <Card.Text>
-                    {this.props.beasts.description}
+                    {this.props.beast.description}
                 </Card.Text>
                 <Button variant="secondary" onClick={this.handleclick}>{'❤️ '}{this.state.Favorite}</Button>
                 </Card.Body>

@@ -8,6 +8,12 @@ Start time 1:08pm.
 Finished time: 4:08pm.
 Actual time needed to (almost) complete: 2 hours 48 minutes.
 
+Lab 03 Function passing:
+Estimate of time... Unknown. I set about a 4 hour cap, and ideally I can complete within that time frame.
+Start time: 1:10pm
+Finish time: 5:35pm
+Time used: 4 hours (subtracting breaks)
+
 
 
 # Getting Started with Create React App
